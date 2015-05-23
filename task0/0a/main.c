@@ -7,12 +7,13 @@
 
 int main (int argc , char* argv[], char* envp[])
 {
-  int i;
-  char c;
-  char * str;
-  str = itoa(argc);
+  /*int i;
+  char c;*/
+  char * str="Hello world";
+  /*str = itoa(argc);*/
   system_call(SYS_WRITE,STDOUT, str,strlen(str));
-  system_call(SYS_WRITE,STDOUT," arguments \n", 12);
+  system_call(SYS_WRITE,STDOUT, "\n", 1);
+  /*system_call(SYS_WRITE,STDOUT," arguments \n", 12);
   system_call(SYS_READ, STDIN , c ,1);
   system_call(SYS_WRITE,STDOUT,c, 1);
   for (i = 0 ; i < argc ; i++)
@@ -23,6 +24,6 @@ int main (int argc , char* argv[], char* envp[])
       system_call(SYS_WRITE,STDOUT,"] = ",4);
       system_call(SYS_WRITE,STDOUT,argv[i],strlen(argv[i]));
       system_call(SYS_WRITE,STDOUT,"\n",1);
-    }
+    }*/
   return 0;
 }
